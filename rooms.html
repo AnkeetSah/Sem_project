@@ -151,14 +151,42 @@
   }
 }
   
-.explore a{
-    /* color: rgb(19, 18, 17); */
-    
-    text-decoration: none;
+.explore{
+    display: flex;
+    width: 97px;
+    justify-content: space-between;
+    padding: 5px;
     font-weight: bolder;
-    -webkit-text-stroke:.1px rgb(24, 5, 5);
-   }
+     text-decoration: none;
+    
+      color:black;
+      border: 1px solid;
+      margin-top: 10px;
+      font-weight: bolder;
+    -webkit-text-stroke:.2px rgb(24, 5, 5);
+      background: linear-gradient(to left, rgb(239, 214, 182) 50%, rgb(19, 18, 17) 50%) right;
+background-size: 200%;
+transition: .3s ease-out;
+
+}
+
    
+   .explore:hover{
+    background-color: rgb(19, 18, 17);
+  
+   color: rgb(239, 214, 182);
+    border: 1px solid black;
+    background-position: left;
+   }
+
+   
+
+   .explore:hover{
+   color: antiquewhite;
+   }
+  
+
+  
     </style>
 </head>
 <body>
@@ -192,7 +220,7 @@
     <div class="container">
        <div class="room"><div class="content"><h1>Executive</h1>
          <p   class="details">This exceptional room with a spacious work area featuring adequate lighting offers the perfect balance between work and play.</p>
-         <p class="explore">Explore <img src="https://cdn-icons-png.flaticon.com/512/545/545682.png" alt=""> </p>
+         <a href="executive.html" class="explore">Explore <i class="fa fa-arrow-right"></i></a>
          
         </div>
          <div class="room1"></div>
@@ -200,19 +228,19 @@
 
        <div class="room"><div class="content"><h1>Premium</h1>
         <p  class="details">Offers floor to ceiling windows with a view of the city.</p>
-        <p class="explore">Explore <img src="https://cdn-icons-png.flaticon.com/512/545/545682.png" alt=""> </p>
+        <a href="rooms.html" class="explore">Explore <i class="fa fa-arrow-right"></i></a>
        </div>
         <div class="room2"></div></div>
 
        <div class="room"><div class="content"><h1>Junior Suite</h1>
          <p  class="details">A lavish 421 sq. ft. room that offers the best for both business and leisure.</p>
-         <p class="explore">Explore <img src="https://cdn-icons-png.flaticon.com/512/545/545682.png" alt=""> </p>
+         <a href="rooms.html" class="explore">Explore <i class="fa fa-arrow-right"></i></a>
         </div>
          <div class="room3"></div></div>
 
        <div class="room"><div class="content"><h1>Metropolitan Suite</h1>
         <p  class="details">An incredible 866 sq ft. suite decorated in a cosmopolitan style.</p>
-        <p class="explore">Explore <img src="https://cdn-icons-png.flaticon.com/512/545/545682.png" alt=""> </p>
+        <a href="rooms.html" class="explore">Explore <i class="fa fa-arrow-right"></i></a>
        </div>
         <div class="room4"></div></div>
         
