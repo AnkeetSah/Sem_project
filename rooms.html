@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .container{
+            height: 100%;
+        }
+
+        .navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    background-color: antiquewhite;
+    position: fixed;
+    margin-top: -90px;
+    width: 100%;
+  }
+  
+ 
+   .room1{
+    background: url("https://www.radhahotels.com/wp-content/themes/radhahotels/images/Stay%20Room%201.webp");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width:105%;
+   } 
+   .room2{
+    background: url("https://www.radhahotels.com/wp-content/themes/radhahotels/images/Stay%20Room%202.webp");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width:105%;
+   } 
+   .room3{
+    background: url("https://www.radhahotels.com/wp-content/themes/radhahotels/images/Stay%20Room%203.webp");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width:105%;
+   }
+   .room4{
+    background: url("https://www.radhahotels.com/wp-content/themes/radhahotels/images/Stay%20Room%204.webp");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width:105%;
+   }
+   .room5{
+    background: url("https://www.radhahotels.com/wp-content/themes/radhahotels/images/Stay%20Room%205.webp");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width:105%;
+   }
+   
+   .heading{
+     margin: 20px;
+     font-family: 'Golos Text', sans-serif;
+     text-align: center;
+    color: rgb(112, 111, 110);
+    margin-top: 90px;
+   }
+
+   .room{
+    width: 90%;
+    height: 400px;
+    margin: 90px auto;
+    display: flex;
+    
+   }
+   
+   .content{
+    background: url("https://www.radhahotels.com/wp-content/themes/radhahotels/images/rooms-section-info.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 320px;
+    padding: 20px;
+    width: 55%;
+    margin-top: 81px;
+  
+  
+   padding-left: 50px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   
+   }
+
+   .content h1{
+    font-family: "scotch-display";
+    font-weight: bolder;
+    -webkit-text-stroke:.1px rgb(21, 14, 14);
+   color: rgb(17, 8, 8);
+}
+
+.content .details{
+    font-family: 'Golos Text', sans-serif;
+    color: rgb(87, 86, 83);
+    font-size: large;
+    font-weight: bolder;
+}
+
+
+@media only screen and (max-width: 770px){
+  .room{
+     flex-direction: column-reverse;
+     height: 500px;
+     background-color: aqua;
+  }
+
+  .room1{
+    height: 70%;
+    width: 100%;
+  } .room2{
+    height: 70%;
+    width: 100%;
+  } .room3{
+    height: 70%;
+    width: 100%;
+  } .room4{
+    height: 70%;
+    width: 100%;
+  } .room5{
+    height: 70%;
+    width: 100%;
+  }
+
+  .content{
+    justify-content: space-between;
+    margin-top: 0px;
+     height:41%;
+     width: 100%;
+    padding-left: 20px;
+   
+  }
+
+ .navbar{
+  margin-top: -90px;
+ }
+  .heading{
+    margin-bottom: -70px;
+
+    margin-top:90px;
+  }
+
+  .explore{
+    margin-top: 9px;
+  
+  }
+}
+  
+.explore a{
+    /* color: rgb(19, 18, 17); */
+    
+    text-decoration: none;
+    font-weight: bolder;
+    -webkit-text-stroke:.1px rgb(24, 5, 5);
+   }
+   
+    </style>
+</head>
+<body>
+    <div class="navbar"> <a href="#" class="nav-branding">Swift Stay</a>
+      
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">ABOUT US</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">ACCOUNT</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">NOTIFICATION</a>
+          </li>
+        </ul>
+
+        <div class="hamburger">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </div>
+      </nav></div>
+      <div class="heading"><h2>Indulge in our 187 exquisite rooms and suites, thoughtfully designed to
+        enchant and delight our esteemed guests.
+        
+        </h2></div>
+    <div class="container">
+       <div class="room"><div class="content"><h1>Executive</h1>
+         <p   class="details">This exceptional room with a spacious work area featuring adequate lighting offers the perfect balance between work and play.</p>
+         <p class="explore">Explore <img src="https://cdn-icons-png.flaticon.com/512/545/545682.png" alt=""> </p>
+         
+        </div>
+         <div class="room1"></div>
+       </div>
+
+       <div class="room"><div class="content"><h1>Premium</h1>
+        <p  class="details">Offers floor to ceiling windows with a view of the city.</p>
+        <p class="explore">Explore <img src="https://cdn-icons-png.flaticon.com/512/545/545682.png" alt=""> </p>
+       </div>
+        <div class="room2"></div></div>
+
+       <div class="room"><div class="content"><h1>Junior Suite</h1>
+         <p  class="details">A lavish 421 sq. ft. room that offers the best for both business and leisure.</p>
+         <p class="explore">Explore <img src="https://cdn-icons-png.flaticon.com/512/545/545682.png" alt=""> </p>
+        </div>
+         <div class="room3"></div></div>
+
+       <div class="room"><div class="content"><h1>Metropolitan Suite</h1>
+        <p  class="details">An incredible 866 sq ft. suite decorated in a cosmopolitan style.</p>
+        <p class="explore">Explore <img src="https://cdn-icons-png.flaticon.com/512/545/545682.png" alt=""> </p>
+       </div>
+        <div class="room4"></div></div>
+        
+        <div class="room"><div class="content"><h1>Presidential Suite</h1>
+        <p  class="details">Exquisitely adorned, this lavish suite embodies the zenith of luxury, curated to satisfy the refined tastes of discerning connoisseurs yearning for an indulgent experience.</p>
+
+        <a href="rooms.html" class="explore">Explore <i class="fa fa-arrow-right"></i></a>
+       </div>
+        <div class="room5"></div></div>
+    </div>
+
+
+
+    <script>
+      const explore=document.querySelector(".explore");
+      explore.addEventListener("click",()=>{
+        alert("hello");
+      });
+    </script>
+
+    <script src="scrift.js"></script>
+</body>
+</html>

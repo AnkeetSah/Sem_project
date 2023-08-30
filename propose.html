@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+      .navigation-auto div {
+        border: 2px solid rgb(196, 191, 193);
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+      }
+
+      .navigation-auto div:not(:last-child) {
+        margin-right: 40px;
+      }
+
+      #radio1:checked ~ .navigation-auto .auto-btn1 {
+        background-color: rgb(23, 24, 24);
+      }
+      #radio2:checked ~ .navigation-auto .auto-btn2 {
+        background-color: rgb(23, 24, 24);
+      }
+      #radio3:checked ~ .navigation-auto .auto-btn3 {
+        background-color: rgb(23, 24, 24);
+      }
+      #radio4:checked ~ .navigation-auto .auto-btn4 {
+        background-color: rgb(23, 24, 24);
+      }
+      .none {
+        display: none;
+      }
+
+      @media only screen and (max-width: 460px) {
+        .rotation {
+          height: 300px;
+        }
+        .rotars {
+          height: 300px;
+        }
+
+        .manual-btn:not(:last-child) {
+          margin-right: 20px;
+        }
+        .navigation-auto div:not(:last-child) {
+          margin-right: 20px;
+        }
+        .navigation-auto {
+          margin-top: 260px;
+        }
+      }
+      @media only screen and (max-width: 860px) {
+        .rotation {
+          height: 400px;
+        }
+        .rotars {
+          height: 400px;
+        }
+        .navigation-auto {
+          margin-top: 360px;
+        }
+
+        .features {
+          flex-direction: column;
+          height: 630px;
+          /* align-items: center; */
+        }
+        .f1 {
+          width: 100%;
+        }
+        .f2 {
+          margin-top: 15px;
+          width: 100%;
+        }
+
+        .dates {
+          text-align: center;
+        }
+      }
+      */ .bookSelect h1 {
+        height: 50px;
+        font-family: "scotch-display";
+        font-size: 50px;
+        width: clamp(25px, 3.8vw, 50px);
+        margin: 10px;
+        color: rgb(133, 98, 12);
+      }
+
+      .bookSelect h2 {
+        font-family: "scotch-display";
+        color: rgb(42, 55, 51);
+      }
+
+      @media only screen and (max-width: 300px) {
+        .covering-event {
+          width: 270px;
+        }
+      }
+
+      .decorations{
+        background-image: url("https://th.bing.com/th/id/R.e7d5861aa5d8f6caa3fa5b45aa4aea0d?rik=Tvly6DQAetrAPw&riu=http%3a%2f%2flightengalegroup.com%2fwp-content%2fuploads%2f2019%2f05%2fgoogle-stock-image.jpg&ehk=x4zZPdJpdYQGibEvS47IpJCiEZKry%2bM7VJBc0TLNDJs%3d&risl=&pid=ImgRaw&r=0");
+        background-image: url("https://th.bing.com/th/id/R.e7d5861aa5d8f6caa3fa5b45aa4aea0d?rik=Tvly6DQAetrAPw&riu=http%3a%2f%2flightengalegroup.com%2fwp-content%2fuploads%2f2019%2f05%2fgoogle-stock-image.jpg&ehk=x4zZPdJpdYQGibEvS47IpJCiEZKry%2bM7VJBc0TLNDJs%3d&risl=&pid=ImgRaw&r=0");
+        background-image: url("https://media.istockphoto.com/id/512422473/photo/romantic-proposal-in-the-city.jpg?s=612x612&w=0&k=20&c=HeaEom1BbVMItCHHXoP73bhL_49bqFwV7L6QaiiaKlk=");
+        /* background-image: url("https://image.freepik.com/free-vector/party-background-with-black-birthday-hat-illustration_159711-60.jpg"); */
+      }
+      @media only screen and (max-width:500px){
+    .decorations{
+      background-image: url("https://media.istockphoto.com/id/1092626026/photo/couple-holding-hands-in-a-restaurant.jpg?s=612x612&w=0&k=20&c=WoBLtuytqHNTLqa9hS_EhEc2zPGvB1KwYeEBf8obhoM=");
+      background-image: url("https://media.istockphoto.com/id/654189902/photo/white-roses-with-engagement-ring-love-design.jpg?s=612x612&w=0&k=20&c=VebQC5_ZNY_mlcYTESzr0u1xSPrMCpaGj2-2S62rmOs=");
+      width: 95%;
+       
+    }
+   
+
+    
+}
+
+.form2{
+    background-image: url("https://media.istockphoto.com/id/1085004340/photo/old-dark-wooden-surface.jpg?s=612x612&w=0&k=20&c=blHcBalXd2OEnh25jNjsomGTne4ysMxOnb1uFwpy8fA=");
+}
+   
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="#" class="nav-branding">Swift Stay</a>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">ABOUT US</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">ACCOUNT</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">NOTIFICATION</a>
+          </li>
+        </ul>
+
+        <div class="hamburger">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="rotation">
+      <div class="rotars">
+        <input type="radio" name="radio-btn" id="radio1" />
+        <input type="radio" name="radio-btn" id="radio2" />
+        <input type="radio" name="radio-btn" id="radio3" />
+        <input type="radio" name="radio-btn" id="radio4" />
+
+        <div class="img first">
+          <img
+            src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/Exec%20Room%201.webp"
+            alt=""
+          />
+        </div>
+        <div class="img">
+          <img
+            src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/Exec%20Room%202.webp"
+            alt=""
+          />
+        </div>
+        <div class="img">
+          <img
+            src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/Exec%20Room%203.webp"
+            alt=""
+          />
+        </div>
+        <div class="img">
+          <img
+            src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/Exec%20Room%204%20(1).webp"
+            alt=""
+          />
+        </div>
+
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+      </div>
+
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn" id="manual1"></label>
+        <label for="radio2" class="manual-btn" id="manual2"></label>
+        <label for="radio3" class="manual-btn" id="manual3"></label>
+        <label for="radio4" class="manual-btn" id="manual4"></label>
+      </div>
+    </div>
+
+    <div class="choose birth">
+      <h1 class="choose-head">
+        <span class="hed"><h1>Select Decoration of Your Choice</h1></span>
+      </h1>
+      <div class="decorations">
+        <form action="">
+          <div class="deco deco1">
+            <input type="checkbox" name="" id="op1" checked />
+            <label for="op1"
+              >Transforming the room with soft fairy lights and rose
+              petals.</label
+            >
+          </div>
+
+          <div class="deco deco2">
+            <input type="checkbox" name="" id="op2" checked />
+            <label for="op2"
+              >Decorating the bathtub with rose petals and scented
+              candles.</label
+            >
+          </div>
+          <div class="deco deco3">
+            <input type="checkbox" name="" id="op3" checked />
+            <label for="op3"
+              >Decoration of the room with a personalized love message
+              banner,heart-shaped towel art on the bed, along with rose petals
+              all over the bed etc.</label
+            >
+          </div>
+          <div class="deco deco4">
+            <input type="checkbox" name="" id="op4" checked />
+            <label for="op4"
+              >Glow in the Dark Stars:Decorate the ceiling with glow in the dark
+              stars and constellations.</label
+            >
+          </div>
+          <div class="deco deco5">
+            <input type="checkbox" name="" id="op5" checked />
+            <label for="op5"
+              >A cozy in-room picnic setup with romantic foods.</label
+            >
+          </div>
+          <div class="deco deco6">
+            <input type="checkbox" name="" id="op6" checked />
+            <label for="op6"
+              >A playlist of romantic songs playing in the background.</label
+            >
+          </div>
+          <div class="deco deco7">
+            <input type="checkbox" name="" id="op7" checked />
+            <label for="op7"
+              >Personalized candlelit dinner for two in the room or on the
+              balcony as per your wish.</label
+            >
+          </div>
+          <div class="deco deco8">
+            <input type="checkbox" name="" id="op8" checked />
+            <label for="op8"
+              >Star Gazing:Telescope and star map for an enchanting night of
+              stargazing</label
+            >
+          </div>
+        </form>
+      </div>
+
+      <!---Code for user input-->
+     
+        <div class="form2">
+          <label for="input"
+            ><q
+              >Is there a specific idea or wish you have in mind that we could
+              help fulfill?</q
+            ></label
+          >
+          <textarea name="" id="" cols="30" rows="4"></textarea> <br />
+         <button class="add">Add</button>
+         
+        </div>
+  
+   <!--- Code ends here for user input-->
+
+    </div>
+
+    <script>
+      const form=document.querySelector("form");
+      const userWish=document.querySelector("textarea");
+        const submit=document.querySelector(".add");
+         
+      
+       
+
+
+      submit.addEventListener("click",()=>{
+      if(userWish.value==""){
+        alert("Please Enter Something");
+      }
+      
+        else{
+      // const icon=document.createElement("i");
+        // icon.innerHTML = '<i class="fa fa-facebook-official"></i>';
+        
+     
+      //  icon.id=`op${form.length+1}`;
+      const div=document.createElement("div");
+      
+      
+      div.classList.add("deco", `deco${form.length+1}`);
+      const label=document.createElement("label");
+      const label2=document.createElement("label");
+      const input=document.createElement("input");
+      input.type="checkbox";
+      input.id=`op${form.length+1}`;
+      label.textContent=userWish.value;
+      label.setAttribute("for",`op${form.length+1}`);
+      label2.setAttribute("for",`op${form.length}`);
+      label.setAttribute("class",`op${form.length+1}`);
+
+      label.innerHTML += '<i class="fa fa-times"></i>';
+      // console.log(label);
+      div.appendChild(input);
+      
+    
+    
+    div.appendChild(label);
+   
+  //  div.appendChild(icon);
+  const enter=div.lastChild;
+     
+   
+    
+      form.appendChild(div);
+
+   
+
+
+        
+       
+   
+   
+   console.log(userWish.value);
+       
+   
+    const labelChild=label.firstElementChild;
+
+     labelChild.addEventListener("click",()=>{
+      const remove=labelChild.parentElement;
+        remove.remove();
+     })
+      
+    }
+      });
+
+              
+</script>
+     
+    
+
+   
+
+    <script src="scrift.js"></script>
+  </body>
+</html>

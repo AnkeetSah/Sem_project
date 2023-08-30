@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      @media only screen and (max-width: 770px){
+        header{
+            margin-top: 40px;
+        }
+      }
+
+      body{
+        height: 100vh;
+      }
+
+      .rotation{
+        width: 100%;
+        height: 600px;
+        background-color: rgb(33, 34, 34);
+        overflow: hidden;
+        
+      }
+      .rotars{
+        width: 500%;
+        display: flex;
+        height: 600px;
+       
+      }
+
+      .img{
+        width: 20%;
+        transition: 2s;
+      }
+      .img img{
+        width: 100%;
+        height: 100%;
+      }
+
+      .navigation-manual{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        margin-top: -40px;
+      }
+
+      .navigation-manual .manual-btn{
+        border: 2px solid rgb(176, 171, 171);
+        border-radius: 10px;
+        padding: 5px;
+        cursor: pointer;
+        transition: 1s;
+      }
+      
+
+      .manual-btn:not(:last-child){
+        margin-right: 40px;
+      }
+
+      .rotars input{
+        display: none;
+      }
+
+      #radio1:checked~ .first{
+        margin-left: 0px;
+      }
+      
+       #radio2:checked~ .first{
+        margin-left: -20%;
+      }
+       #radio3:checked~ .first{
+        margin-left: -40%;
+      } 
+      #radio4:checked~ .first{
+        margin-left: -60%;
+      }
+
+       .navigation-auto{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 560px;
+      /* display: none; */
+     }
+
+     .navigation-auto div{
+      border: 2px solid rgb(196, 191, 193);
+      padding: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 1s;
+     }
+
+     .navigation-auto div:not(:last-child){
+      margin-right: 40px;
+     }
+    
+     
+    
+
+      #radio1:checked ~ .navigation-auto .auto-btn1 {
+      background-color: rgb(23, 24, 24);
+     }#radio2:checked ~ .navigation-auto .auto-btn2 {
+      background-color: rgb(23, 24, 24);
+     }#radio3:checked ~ .navigation-auto .auto-btn3 {
+      background-color: rgb(23, 24, 24);
+     }#radio4:checked ~ .navigation-auto .auto-btn4 {
+      background-color: rgb(23, 24, 24);
+      } 
+      .none{
+        display: none;
+      }
+
+      @media only screen and (max-width: 460px){
+        .rotation{
+          height: 300px;
+        }
+        .rotars{
+          height: 300px;
+        }
+
+        .manual-btn:not(:last-child){
+        margin-right: 20px;
+      }
+      .navigation-auto div:not(:last-child){
+      margin-right: 20px;
+     }
+     .navigation-auto{
+       margin-top: 260px;
+     }
+      }
+      @media only screen and (max-width: 860px){
+        .rotation{
+          height: 400px;
+        }
+        .rotars{
+          height: 400px;
+        }
+     .navigation-auto{
+       margin-top: 360px;
+     }
+
+     .features{
+      flex-direction: column;
+      height:  630px;
+      /* align-items: center; */
+       
+
+     }
+     .f1{
+      width: 100%;
+     }
+     .f2{
+      margin-top: 15px;
+      width: 100%;
+     }
+
+     .dates{
+              text-align: center;
+            }
+    }
+   
+    
+   .bookSelect h1{
+    height: 50px;
+    font-family: "scotch-display";
+    font-size: 50px;
+    width: clamp(25px, 3.8vw, 50px);
+    margin: 10px;
+    color: rgb(133, 98, 12);
+   }
+
+   .bookSelect h2{
+    font-family: "scotch-display";
+    color: rgb(42, 55, 51);
+    
+}
+
+
+#click a{
+  text-decoration: none;
+  color: black;
+}
+  
+
+    
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <a href="#" class="nav-branding">Swift Stay</a>
+  
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">ACCOUNT</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">NOTIFICATION</a>
+            </li>
+          </ul>
+  
+          <div class="hamburger">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+          </div>
+        </nav>
+      </header>
+
+
+      <div class="rotation">
+        <div class="rotars">
+          <input type="radio" name="radio-btn" id="radio1" >
+          <input type="radio" name="radio-btn" id="radio2" >
+          <input type="radio" name="radio-btn" id="radio3" >
+          <input type="radio" name="radio-btn" id="radio4" >
+         
+          <div class="img first">
+            <img src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/Exec%20Room%201.webp" alt="">
+        </div>
+        <div class="img">
+            <img src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/Exec%20Room%202.webp" alt="">
+        </div> 
+        <div class="img">
+            <img src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/Exec%20Room%203.webp" alt="">
+        </div>
+         <div class="img">
+            <img src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/Exec%20Room%204%20(1).webp" alt="">
+        </div>
+         
+        <div class="navigation-auto ">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+        </div>
+
+        <div class="navigation-manual ">
+          <label for="radio1" class="manual-btn" id="manual1"></label>
+          <label for="radio2" class="manual-btn" id="manual2"></label>
+          <label for="radio3" class="manual-btn" id="manual3"></label>
+          <label for="radio4" class="manual-btn" id="manual4"></label>
+        </div>
+      </div>
+
+
+      <div class="features">
+        <div class="f1"><h1>features and 
+          amenities</h1></div>
+        <div class="f2">
+          <div class="feature">
+            <img src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/Elevator.png">
+            <p>Located from the 6th to 7th floors of the hotel.</p>
+          </div> 
+          <div class="feature">
+            <img src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/Bed.png">
+            <p>Offers a comfortable king bed.</p>
+          </div> 
+          <div class="feature">
+            <img src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/View+Window.png">
+            <p>Floor to ceiling windows with a view of the open pool.</p>
+          </div> 
+          <div class="feature">
+            <img src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/Wifi.png">
+            <p>A well equipped work area with adequate lighting, wired and wireless connectivity.</p>
+          </div>
+          <div class="feature">
+            <img src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/Bath.png">
+            <p>Spacious bathroom with a separate rainforest shower and a luxurious tub.</p>
+          </div> 
+          <div class="feature">
+            <img src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/TV.png">
+            <p>49'' LED interactive television with international channels and the option for media connectivity.</p>
+          </div>
+   
+        </div>
+      </div>
+
+
+
+      <div class="booking">
+        <div class="bookTitle"><h1>Ready to book?</h1></div>
+        <div class="selectOptions">
+          <div class="selection">
+            <div class="bookSelect">
+              <div class="h2">Arrival:</div>
+              <h1 id="enter">29</h1>
+              <div class="dates">
+                <h2>
+                            <span class="month1"> August </span> <span class="year1">2023</span></h2>
+                  <h2 class="day1">Tuesday</h2>
+              </div>
+             <input type="date" name="arival" id="arival">
+           </div>
+            <div class="bookSelect">
+             <div class="h2">Departure:</div>
+              <h1 id="exit">29</h1>
+              <div class="dates">
+                 <h2>
+                            <span class="month2"> August </span> <span class="year2">2023</span></h2>
+                  <h2 class="day2">Tuesday</h2>
+             
+              </div>
+              <input type="date" name="arival" class="departure" id="arival">
+  
+  
+                </div>
+          </div>
+         <div class="selection2">
+          
+         <div class="roomSelect1">
+          <h2 class="ro">Rooms</h2>
+          <h1 class="change">1</h1>
+    <div class="rang">
+        <div class="plus fun">+</div>
+        <div class="minus fun">-</div>
+    </div>
+         </div>
+         
+         <div class="roomSelect">
+          <h2 class="ro">Adults</h2>
+          <h1 class="change1">1</h1>
+    <div class="rang">
+        <div class="plus1 fun">+</div>
+        <div class="minus1 fun">-</div>
+    </div>
+         </div> 
+         
+         <div class="roomSelect">
+          <h2 class="ro">Child</h2>
+          <h1 class="change2">1</h1>
+    <div class="rang">
+        <div class="plus2 fun">+</div>
+        <div class="minus2 fun">-</div>
+    </div>
+  </div>
+         </div>
+         
+
+        </div>
+      </div>
+
+      <div class="special">
+        <h1 class="">Need any Special decorations 
+          <button id="click" style="font-size:24px"><a href="special.html">click <i class="fa fa-hand-pointer-o"></i></a></i></button>
+          
+        </h1>
+      </div>
+
+          <script src="scrift.js"></script>
+        <script type="text/javascript">
+    let count=2;
+     
+    setInterval(()=>{
+        document.querySelector("#radio"+count).checked=true;
+        count++;
+      
+        if(count>4){
+            count=1;
+        }
+    },5000);
+      </script>
+
+      <!-- <script>
+        
+        const enterdate=document.querySelector(".bookSelect #enter");
+        const exitdate=document.querySelector(".bookSelect #exit");
+        const selectDate=document.querySelector("input[type=date]");
+        const year1=document.querySelector(".year1");
+        const year2=document.querySelector(".year2");
+        const month1=document.querySelector(".month1");
+        const month2=document.querySelector(".month2");
+        const day1=document.querySelector(".day1");
+        const day2=document.querySelector(".day2");
+        const departureDate=document.querySelector(".departure");
+
+        selectDate.addEventListener("input",()=>{
+          let inputDate=new Date(selectDate.value);
+          enterdate.innerHTML=inputDate.getDate();
+          console.log(inputDate.getMonth());
+         switch(inputDate.getMonth()){
+          case (0):
+           month1.innerHTML="January";
+            break;
+            case (1):
+            month1.innerHTML="February";
+            break;
+          case (2):
+          month1.innerHTML="March";
+            break;
+          case (3):
+          month1.innerHTML="April";
+            break;
+          case (4):
+          month1.innerHTML="May";
+            break;
+          case (5):
+          month1.innerHTML="June";
+            break;
+          case (6):
+          month1.innerHTML="July";
+            break;
+          case (7):
+          month1.innerHTML="August";
+            break;
+          case (8):
+          month1.innerHTML="September";
+            break;
+          case (9):
+          month1.innerHTML="October";
+            break;
+          case (10):
+          month1.innerHTML="November";
+            break;
+          case (11):
+          month1.innerHTML="December";
+         }
+
+
+         switch (inputDate.getDay()) {
+          case (1):
+            day1.innerHTML="Monday";
+            break;
+             case (2):
+            day1.innerHTML="Tuesday";
+            break;
+            case (3):
+            day1.innerHTML="Wednesday";
+            break; case (4):
+            day1.innerHTML="Thursday";
+            break; case (5):
+            day1.innerHTML="Friday";
+            break; case (6):
+            day1.innerHTML="Saturday";
+            break; case (0):
+            day1.innerHTML="Sunday";
+            break;
+         
+          default:
+            break;
+         }
+
+        
+          
+        });
+        departureDate.addEventListener("input",()=>{
+          let inputDate=new Date(departureDate.value);
+          exitdate.innerHTML=inputDate.getDate();
+           
+          switch(inputDate.getMonth()){
+          case (0):
+           month2.innerHTML="January";
+            break;
+            case (1):
+            month2.innerHTML="February";
+            break;
+          case (2):
+          month2.innerHTML="March";
+            break;
+          case (3):
+          month2.innerHTML="April";
+            break;
+          case (4):
+          month2.innerHTML="May";
+            break;
+          case (5):
+          month2.innerHTML="June";
+            break;
+          case (6):
+          month2.innerHTML="July";
+            break;
+          case (7):
+          month2.innerHTML="August";
+            break;
+          case (8):
+          month2.innerHTML="September";
+            break;
+          case (9):
+          month2.innerHTML="October";
+            break;
+          case (10):
+          month2.innerHTML="November";
+            break;
+          case (11):
+          month2.innerHTML="December";
+         }
+
+ 
+
+         switch (inputDate.getDay()) {
+          case (1):
+            day2.innerHTML="Monday";
+            break;
+             case (2):
+            day2.innerHTML="Tuesday";
+            break;
+            case (3):
+            day2.innerHTML="Wednesday";
+            break; case (4):
+            day2.innerHTML="Thursday";
+            break; case (5):
+            day2.innerHTML="Friday";
+            break; case (6):
+            day2.innerHTML="Saturday";
+            break; case (0):
+            day2.innerHTML="Sunday";
+            break;
+         
+          default:
+            break;
+         }
+
+
+
+          
+        });
+
+        
+        
+       
+      </script>
+       -->
+</body>
+</html>

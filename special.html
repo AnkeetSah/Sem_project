@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      
+
+     .navigation-auto div{
+      border: 2px solid rgb(196, 191, 193);
+      padding: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 1s;
+     }
+
+     .navigation-auto div:not(:last-child){
+      margin-right: 40px;
+     }
+    
+     
+    
+
+      #radio1:checked ~ .navigation-auto .auto-btn1 {
+      background-color: rgb(23, 24, 24);
+     }#radio2:checked ~ .navigation-auto .auto-btn2 {
+      background-color: rgb(23, 24, 24);
+     }#radio3:checked ~ .navigation-auto .auto-btn3 {
+      background-color: rgb(23, 24, 24);
+     }#radio4:checked ~ .navigation-auto .auto-btn4 {
+      background-color: rgb(23, 24, 24);
+      } 
+      .none{
+        display: none;
+      }
+
+      @media only screen and (max-width: 460px){
+        .rotation{
+          height: 300px;
+        }
+        .rotars{
+          height: 300px;
+        }
+
+        .manual-btn:not(:last-child){
+        margin-right: 20px;
+      }
+      .navigation-auto div:not(:last-child){
+      margin-right: 20px;
+     }
+     .navigation-auto{
+       margin-top: 260px;
+     }
+      }
+      @media only screen and (max-width: 860px){
+        .rotation{
+          height: 400px;
+        }
+        .rotars{
+          height: 400px;
+        }
+     .navigation-auto{
+       margin-top: 360px;
+     }
+
+     .features{
+      flex-direction: column;
+      height:  630px;
+      /* align-items: center; */
+       
+
+     }
+     .f1{
+      width: 100%;
+     }
+     .f2{
+      margin-top: 15px;
+      width: 100%;
+     }
+
+     .dates{
+              text-align: center;
+            }
+    }
+    
+    
+   .bookSelect h1{
+    height: 50px;
+    font-family: "scotch-display";
+    font-size: 50px;
+    width: clamp(25px, 3.8vw, 50px);
+    margin: 10px;
+    color: rgb(133, 98, 12);
+   }
+
+   .bookSelect h2{
+    font-family: "scotch-display";
+    color: rgb(42, 55, 51);
+    
+}
+
+
+@media only screen and (max-width:300px){
+      .covering-event{
+        width: 270px;
+      }
+    }
+
+   
+    .click {
+      font-size: 22px;
+      border-radius: 10px;
+      padding: 0 4px;
+      background-color: #dcc167;
+      color: black;
+      -webkit-text-stroke: 1px black ;
+    }
+
+    .click:hover{
+            background-color: antiquewhite;
+            transform: scale(1.1);
+          
+    }
+
+
+    .click a{
+      text-decoration: none;
+      color: black;
+    }
+
+   
+
+    
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <a href="#" class="nav-branding">Swift Stay</a>
+  
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">ACCOUNT</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">NOTIFICATION</a>
+            </li>
+          </ul>
+  
+          <div class="hamburger">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+          </div>
+        </nav>
+      </header>
+
+
+      <div class="rotation">
+        <div class="rotars">
+          <input type="radio" name="radio-btn" id="radio1" >
+          <input type="radio" name="radio-btn" id="radio2" >
+          <input type="radio" name="radio-btn" id="radio3" >
+          <input type="radio" name="radio-btn" id="radio4" >
+         
+          <div class="img first">
+            <img src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/Exec%20Room%201.webp" alt="">
+        </div>
+        <div class="img">
+            <img src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/Exec%20Room%202.webp" alt="">
+        </div> 
+        <div class="img">
+            <img src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/Exec%20Room%203.webp" alt="">
+        </div>
+         <div class="img">
+            <img src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/Exec%20Room%204%20(1).webp" alt="">
+        </div>
+         
+        <div class="navigation-auto ">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+        </div>
+
+        <div class="navigation-manual ">
+          <label for="radio1" class="manual-btn" id="manual1"></label>
+          <label for="radio2" class="manual-btn" id="manual2"></label>
+          <label for="radio3" class="manual-btn" id="manual3"></label>
+          <label for="radio4" class="manual-btn" id="manual4"></label>
+        </div>
+      </div>
+    
+
+      <div class="special-variety">
+         <div class="eventhead">
+            <h1>Ocassion Odyssey</h1>
+         </div>
+         
+         <div class="all-events">
+            <div class="event">
+                <div class="covering-event">
+                    <img src="https://images.unsplash.com/photo-1550155888-430386a434b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" alt="">
+                    <div class="choose"><h2>Romantic Getawayas <br><button class="click"><a href="special2.html">click</a></button></h2></div>
+                    <div class="overflow">
+                      <div class="overflow-text">
+                        <h2><q>Unveil Moments of Love<br>and Bliss</q></h2>
+                      </div>
+                    </div>
+                </div>
+            </div>
+                
+                <div class="event">
+                <div class="covering-event">
+                    <img src="https://www.brides.com/thmb/cwkbtzPMXOvG1jyNtI34-kTn1x8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__brides__public__brides-services__production__2018__12__18__5c1948edba98247fa6942af2_Proposal-Photos-6-639e6a3d29294c919daae4ecd3b11762.jpg" alt="">
+                    <div class="choose"><h2>Proposals <br><button class="click"><a href="propose.html">click</a></button></h2></div>
+                    <div class="overflow">
+                      <div class="overflow-text">
+                        <h2><q>Crafting forever <br> Beginnings</q></h2>
+                      </div>
+                    </div>
+                </div>
+         </div>
+         
+         <div class="event">
+                <div class="covering-event">
+                    <img src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=964&q=80" alt="">
+                    <div class="choose"><h2>Birthday Celebration<br><button class="click"><a href="birthday.html">click</a></button></h2></div>
+                    <div class="overflow">
+                      <div class="overflow-text">
+                        <h2><q>Celebrating You,One <br> Year Bolder</q></h2>
+                      </div>
+                    </div>
+
+
+                </div>
+         </div>
+         
+         <div class="event">
+                <div class="covering-event">
+                    <img src="https://th.bing.com/th/id/OIP.yPjeH8KvwRnSrdDIvrizUwHaE7?pid=ImgDet&rs=1" alt="">
+                    <div class="choose"><h2>Bachelorette/Bachelore Parties  <button class="click"><a href="bachelor.html">click</a></button></h2></div>
+                    <div class="overflow">
+                      <div class="overflow-text">
+                        <h2><q>Unleash the Party Spirit</q></h2>
+                      </div>
+                    </div>
+
+
+
+                </div>
+         </div>
+
+<div class="event">
+                <div class="covering-event">
+                    <img src="https://floweraura-blog-img.s3.ap-south-1.amazonaws.com/Anniversary-Celebration-2019/Cover-Image.jpg" alt="">
+                    <div class="choose"><h2>Anniversary Celebration<br><button class="click">click</button></h2></div>
+                    <div class="overflow">
+                      <div class="overflow-text">
+                        <h2><q>Celebrate Milestones of <br> Forever Love</q> </h2>
+                      </div>
+                    </div>
+
+                </div>
+         </div>
+
+         </div>
+
+      </div>
+
+      <script src="scrift.js"></script>
+</body>
+</html>

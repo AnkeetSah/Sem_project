@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .rang{
+        display: flex;
+        width: 70px;
+        justify-content: space-between;
+        align-items: center;
+       }
+
+       .rang *{
+          background-color: aqua;
+          width: 30px;
+          text-align: center;
+          border-radius: 50%;
+          font-size:xx-large;
+          font-weight: bolder;
+          cursor: pointer;
+       }
+       
+    </style>
+</head>
+<body>
+    <h1 class="change">1</h1>
+    <div class="rang">
+        <h1 class="plus fun">+</h1>
+        <h1 class="minus fun">-</h1>
+    </div>
+
+    <script>
+        
+     const plus=document.querySelector(".plus");
+     const minus=document.querySelector(".minus");
+       
+        
+
+       let increase=1;
+        plus.addEventListener("click",()=>{
+           increase=increase+1;    
+           document.querySelector(".change").textContent=increase;                
+        })
+
+        minus.addEventListener("click",()=>{
+            increase=increase-1;
+            document.querySelector(".change").textContent=increase;
+           })
+    
+    </script>
+</body>
+</html>
