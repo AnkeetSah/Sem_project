@@ -348,7 +348,8 @@
 
 
      .features{
-      height: 500px;
+      /* height: 500px; */
+    
       width: 90%;
       margin-left: 20px;
      padding: 50px;
@@ -365,6 +366,7 @@
      .f2{
       width: 50%;
       height: 100%;
+      
      }
 
      .feature{
@@ -528,6 +530,13 @@
       
 
        @media only screen and (max-width: 860px){
+        .features{
+          flex-direction: column;
+         
+          /* align-items: center; */
+           
+    
+         }
        
        .booking{
         /* background-color: aqua; */
@@ -584,6 +593,9 @@
         }
        }
       
+       .f2{
+        background-color: #B49961;
+       }
        @media only screen and (max-width:550px){
         .selection{
           width: 60%;
@@ -600,7 +612,13 @@
                   }
 
                   .booking{
-                    height: 410px;
+                   
+                    height: 470px;
+                  }
+                  .features{
+                    height: 0px;
+                    background-color: rgb(34, 212, 34);
+                    height: auto;
                   }
        }  
        
