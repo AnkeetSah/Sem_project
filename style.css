@@ -532,7 +532,7 @@
        @media only screen and (max-width: 860px){
         .features{
           flex-direction: column;
-         
+          
           /* align-items: center; */
            
     
@@ -593,9 +593,7 @@
         }
        }
       
-       .f2{
-        background-color: #B49961;
-       }
+       
        @media only screen and (max-width:550px){
         .selection{
           width: 60%;
@@ -617,9 +615,10 @@
                   }
                   .features{
                     height: 0px;
-                    background-color: rgb(34, 212, 34);
+                    
                     height: auto;
                   }
+                  
        }  
        
 
@@ -681,7 +680,7 @@
     
       @media only screen and (max-width: 300px){
       .features{
-          margin-bottom: 350px;
+          margin-bottom: 30px;
          
           height: 20px;
            /* background-color: rgb(199, 213, 8); */
