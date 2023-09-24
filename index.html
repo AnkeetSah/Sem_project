@@ -152,11 +152,8 @@
         
        }
 
-       .input-box input:focus~label,
-       .input-box input:focus~label{
-        top: -5px;
-       }
-
+       
+      
       .input-box input{
         width: 100%;
         height: 100%;
@@ -346,17 +343,17 @@
 
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" name="" id="">
-                    <label for="">Email</label>
+                    <input type="email" name="" id="" class="input">
+                    <label for="" id="i1">Email</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" name="" id="">
-                    <label for="">Password</label>
+                    <input type="password" name="" id="" class="input">
+                    <label for="" id="i2">Password</label>
                 </div>
 
                 <div class="remeber-forgot">
-                    <label for=""><input type="checkbox" name="" id="">Remember me</label>
+                    <label for="" id=""><input type="checkbox" name="" id="">Remember me</label>
                     <a href="">Forgot Password</a>
                 </div>
                 <button type="submit" class="btn"><a href="index1.html" class="button">Login</a></button>
@@ -372,21 +369,21 @@
           <form action="#">
               <div class="input-box">
                   <span class="icon"><ion-icon name="person"></ion-icon></ion-icon></span>
-                  <input type="email" name="" id="">
-                  <label for="">Username</label>
+                  <input type="text" name="" id="" class="input">
+                  <label for="" id="i3">Username</label>
               </div>
               
               <div class="input-box">
                   <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                  <input type="email" name="" id="">
-                  <label for="">Email </label>
+                  <input type="email" name="" id="" class="input">
+                  <label for="" id="i4">Email </label>
               </div>
 
 
               <div class="input-box">
                   <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                  <input type="password" name="" id="">
-                  <label for="">Password</label>
+                  <input type="password" name="" id="" class="input">
+                  <label for="" id="i5">Password</label>
               </div>
 
               <div class="remeber-forgot">
@@ -417,6 +414,39 @@
   
   loginLink.addEventListener('click',()=>{
     wrapper.classList.remove('active');
+  })
+
+  const label=document.querySelectorAll("label");
+  const input=document.querySelectorAll(".input");
+  const id1=document.querySelector("#i1");
+  const id2=document.querySelector("#i2");
+  const id3=document.querySelector("#i3");
+  const id4=document.querySelector("#i4");
+  const id5=document.querySelector("#i5");
+  const inputs=Array.from(input);
+  const labels=Array.from(label);
+  inputs.forEach((element,index)=>{
+    element.addEventListener("input",()=>{
+      switch(index){
+        case 0:
+          id1.style.top="-5px";
+          break;
+           case 1:
+          id2.style.top="-5px";          
+          break;
+           case 2:
+          id3.style.top="-5px";
+          console.log(element);
+          break; 
+          case 3:
+          id4.style.top="-5px";
+          break;
+          case 4:
+          id5.style.top="-5px";
+          break;
+          
+      }
+    })
   })
 </script>
   </body>

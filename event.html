@@ -18,9 +18,10 @@
   body {
    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 100vh;
-    background-color: #e3e9f7;
+    /* background-color: #e3e9f7; */
     font-family: "Noto Serif", serif;
     font-family: "Rubik", sans-serif;
+    
   }
  
   li {
@@ -408,13 +409,14 @@ transition: .3s ease-out;
  }
   
 }
-
+header{
+  position: fixed;
+  width: 100%;
+}
 .class2{
-  background-color: rgb(176, 232, 232);
   display: flex;
   align-items:center;
-  justify-content: center;
-  position: absolute;
+  justify-content: center'
 }
     
 .class2left{
@@ -442,7 +444,7 @@ transition: .3s ease-out;
   margin-bottom: 10px;
   background-color: aqua;
   overflow: hidden;
-  position: relative;
+  /* position: relative; */
  margin-right: 40px;
 }
 
@@ -473,10 +475,11 @@ transition: .3s ease-out;
     }
     
     .labeldiv{
-      position: absolute;
-      top: 87%;
-      left: 41%;
-      
+      /* position: absolute; */
+     
+      margin-top: -60px;
+      margin-left: 41%;
+      background-color: aqua;
       width: 150px;
       display: flex;
       justify-content: space-evenly;
@@ -507,8 +510,8 @@ transition: .3s ease-out;
      
       }
       .eventslide{
-        position: relative;
-        left:  -50px;
+       
+        margin-left:  -50px;
         height: 350px;
         width: 500px;
       }
@@ -519,7 +522,8 @@ transition: .3s ease-out;
       }
 
      .labeldiv{
-      left: 110px;
+      margin-left: 110px;
+      margin-top: -50px;
      }
 
      .class2{
@@ -596,7 +600,7 @@ transition: .3s ease-out;
           <div class="eventslide">
               <div class="eventslider">
                 <div class="slides_event firstev">
-                  <img src="https://www.radhahotels.com/wp-content/themes/radhahotels/images/Carnation%202.webp" alt="">
+                  <img src="https://th.bing.com/th/id/OIP.UU2vp8jKfyg216uIVf_ZPwHaE8?pid=ImgDet&rs=1" alt="">
                 </div> 
                 <div class="slides_event">
                   <img src="https://d2j6dbq0eux0bg.cloudfront.net/images/18059755/1401432058.jpg" alt="">
@@ -607,8 +611,36 @@ transition: .3s ease-out;
               <input type="radio" name="slides" id="slide2" class="manual">
              </div>
              <div class="labeldiv">
-            <label for="slide1"><img src="https://cdn-icons-png.flaticon.com/512/4096/4096251.png" alt="" id="li1"></label>
-            <label for="slide2"><img src="https://cdn-icons-png.flaticon.com/512/4096/4096251.png" alt="" id="li2"></label>
+              <label for="slide1"><img src="https://cdn-icons-png.flaticon.com/512/4096/4096251.png" alt="" id="li1"></label>
+              <label for="slide2"><img src="https://cdn-icons-png.flaticon.com/512/4096/4096251.png" alt="" id="li2"></label>
+               </div>
+          </div>
+          </div>
+          
+          <div class="class2">
+          <div class="class2left">
+            <h1>Board Room</h1>
+            <h3>Discover the ideal, stylish meeting space with state-of-the-art AV facilities. Our executive boardroom accommodates 16 guests and includes a dedicated breakaway area for informal discussions. Experience perfection, style, and functionality in one well-contained setting.</h3>
+                
+                <a href="rooms.html" class="explore">Book now <i class="fa fa-arrow-right"></i></a>
+          </div>
+
+          <div class="eventslide">
+              <div class="eventslider">
+                <div class="slides_event secondev">
+                  <img src="https://media.istockphoto.com/id/98395721/photo/conference-room-with-a-long-table-and-lots-of-chairs.jpg?s=612x612&w=0&k=20&c=ZGOQgn93GdwUpcFKu6H9R_TRukmOz5i3v4MVxEpZ_zk=" alt="">
+                </div> 
+                <div class="slides_event">
+                  <img src="https://media.istockphoto.com/id/102735093/photo/conference-room-in-hotel.jpg?s=612x612&w=0&k=20&c=VF0NKkXDN7vygW3WXXoCbunqvgxPD9oBxLzhtxJo4BE=" alt="">
+                </div>
+              </div>
+             <div class="btn">
+              <input type="radio" name="slides" id="slide3" class="manual">
+              <input type="radio" name="slides" id="slide4" class="manual">
+             </div>
+             <div class="labeldiv">
+            <label for="slide3"><img src="https://cdn-icons-png.flaticon.com/512/4096/4096251.png" alt="" id="li3"></label>
+            <label for="slide4"><img src="https://cdn-icons-png.flaticon.com/512/4096/4096251.png" alt="" id="li4"></label>
              </div>
           </div>
           </div>
@@ -616,13 +648,22 @@ transition: .3s ease-out;
           
 
           <script>
+
+           
+
+
             const radiobtn=document.querySelectorAll(".manual");
             const radioarray=Array.from(radiobtn);
+            console.log(radioarray);
             const li2=document.querySelector("#li2");
             const li1=document.querySelector("#li1");
+            const li3=document.querySelector("#li3");
+            const li4=document.querySelector("#li4");
             const firstev=document.querySelector(".firstev");
-            radioarray.forEach((element,index)=>{
-              element.addEventListener("click",()=>{
+            const secondev=document.querySelector(".secondev");
+
+
+            const rev=(index)=>{
                 switch(index){
                   case 0:
                     firstev.style.marginLeft="0%";
@@ -633,8 +674,26 @@ transition: .3s ease-out;
                   firstev.style.marginLeft="-58%";
                   li2.src="https://cdn-icons-png.flaticon.com/512/4096/4096150.png";
                 li1.src="https://cdn-icons-png.flaticon.com/512/4096/4096251.png";
+                break;
+                case 2:
+                secondev.style.marginLeft="0%";
+                li4.src="https://cdn-icons-png.flaticon.com/512/4096/4096251.png";
+                li3.src="https://cdn-icons-png.flaticon.com/512/4096/4096150.png";
+                break;
+                case 3:
+                secondev.style.marginLeft="-58%";
+                li4.src="https://cdn-icons-png.flaticon.com/512/4096/4096150.png";
+                li3.src="https://cdn-icons-png.flaticon.com/512/4096/4096251.png";
                 }
-              })
+              }
+
+
+
+
+            radioarray.forEach((element,index)=>{
+              element.addEventListener("click",()=>{
+                rev(index)
+              });
             })
 
             let i=0;
