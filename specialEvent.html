@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      
+
+     .navigation-auto div{
+      border: 2px solid rgb(196, 191, 193);
+      padding: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 1s;
+     }
+
+     .navigation-auto div:not(:last-child){
+      margin-right: 40px;
+     }
+    
+     
+    
+
+      #radio1:checked ~ .navigation-auto .auto-btn1 {
+      background-color: rgb(23, 24, 24);
+     }#radio2:checked ~ .navigation-auto .auto-btn2 {
+      background-color: rgb(23, 24, 24);
+     }#radio3:checked ~ .navigation-auto .auto-btn3 {
+      background-color: rgb(23, 24, 24);
+     }#radio4:checked ~ .navigation-auto .auto-btn4 {
+      background-color: rgb(23, 24, 24);
+      } 
+      .none{
+        display: none;
+      }
+
+      @media only screen and (max-width: 460px){
+        .rotation{
+          height: 300px;
+        }
+        .rotars{
+          height: 300px;
+        }
+
+        .manual-btn:not(:last-child){
+        margin-right: 20px;
+      }
+      .navigation-auto div:not(:last-child){
+      margin-right: 20px;
+     }
+     .navigation-auto{
+       margin-top: 260px;
+     }
+      }
+      @media only screen and (max-width: 860px){
+        .rotation{
+          height: 400px;
+        }
+        .rotars{
+          height: 400px;
+        }
+     .navigation-auto{
+       margin-top: 360px;
+     }
+
+     .features{
+      flex-direction: column;
+      height:  630px;
+      /* align-items: center; */
+       
+
+     }
+     .f1{
+      width: 100%;
+     }
+     .f2{
+      margin-top: 15px;
+      width: 100%;
+     }
+
+     .dates{
+              text-align: center;
+            }
+    }
+    
+    
+   .bookSelect h1{
+    height: 50px;
+    font-family: "scotch-display";
+    font-size: 50px;
+    width: clamp(25px, 3.8vw, 50px);
+    margin: 10px;
+    color: rgb(133, 98, 12);
+   }
+
+   .bookSelect h2{
+    font-family: "scotch-display";
+    color: rgb(42, 55, 51);
+    
+}
+
+
+@media only screen and (max-width:300px){
+      .covering-event{
+        width: 270px;
+      }
+    }
+
+   
+    .click {
+      font-size: 22px;
+      border-radius: 10px;
+      padding: 0 4px;
+      background-color: #dcc167;
+      color: black;
+      -webkit-text-stroke: 1px black ;
+    }
+
+    .click:hover{
+            background-color: antiquewhite;
+            transform: scale(1.1);
+          
+    }
+
+
+    .click a{
+      text-decoration: none;
+      color: black;
+    }
+
+   .rotation img{
+    width: 100%;
+    height: 100%;
+   }
+
+
+   .covering-event1{
+    background-color: black;
+    padding: 0 10px 10px 10px;
+    border-radius: 25px;
+   }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <a href="#" class="nav-branding">Swift Stay</a>
+  
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">ACCOUNT</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">NOTIFICATION</a>
+            </li>
+          </ul>
+  
+          <div class="hamburger">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+          </div>
+        </nav>
+      </header>
+
+
+      <div class="rotation">
+        <img src="https://th.bing.com/th/id/R.ffca435ff6125b30a7c510a1cdfbc553?rik=oiTxow2KJvtIEQ&riu=http%3a%2f%2fstatic.businessworld.in%2farticle%2farticle_extra_large_image%2f1598015126_YvTjER_banquet_hall.jpg&ehk=PlcnZ4dWcllpV3dtNxeZ5Zf%2bnTrZlKpnb74%2fzeJQ0gc%3d&risl=&pid=ImgRaw&r=0" alt="">
+      </div>
+    
+
+      <div class="special-variety">
+         <div class="eventhead">
+            <h1>Ocassion Odyssey</h1>
+         </div>
+         
+         <div class="all-events">
+            <div class="event">
+                <div class="covering-event">
+                    <img src="https://i.pinimg.com/originals/b1/d2/7b/b1d27bbe96cc8a1c05d91befc40613a7.jpg" alt="">
+                    <!-- <img src="https://apis.xogrp.com/media-api/images/72241d24-e14d-4cca-98a6-9af1d06b95cf" alt=""> -->
+                    <div class="choose"><h2>Wedddings<br><button class="click"><a href="special2.html">click</a></button></h2></div>
+                    <div class="overflow">
+                      <div class="overflow-text">
+                        <h2><q>Unveil Moments of Love<br>and Bliss</q></h2>
+                      </div>
+                    </div>
+                </div>
+            </div>
+                
+                <div class="event">
+                <div class="covering-event">
+                    <img src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=964&q=80" alt="">
+                    <div class="choose"><h2>Birthday Party <br><button class="click"><a href="propose.html">click</a></button></h2></div>
+                    <div class="overflow">
+                      <div class="overflow-text">
+                        <h2><q>Crafting forever <br> Beginnings</q></h2>
+                      </div>
+                    </div>
+                </div>
+         </div>
+         
+         <div class="event">
+                <div class="covering-event">
+                    <img src="https://www.inventiveevents.com/wp-content/uploads/2019/02/awards-1.jpg" alt="">
+                    <div class="choose"><h2>Award Ceremonies<br><button class="click"><a href="birthday.html">click</a></button></h2></div>
+                    <div class="overflow">
+                      <div class="overflow-text">
+                        <h2><q>Celebrating You,One <br> Year Bolder</q></h2>
+                      </div>
+                    </div>
+                </div>
+         </div>
+         <div class="event">
+                <div class="covering-event">
+                    <img src="https://i.pinimg.com/originals/42/39/29/423929ef6469b1c9a7f80300773f7117.jpg" alt="">
+                    <div class="choose"><h2>Marriage reception<br><button class="click"><a href="birthday.html">click</a></button></h2></div>
+                    <div class="overflow">
+                      <div class="overflow-text">
+                        <h2><q>Celebrating You,One <br> Year Bolder</q></h2>
+                      </div>
+                    </div>
+                </div>
+         </div>
+
+         <div class="event">
+                <div class="covering-event1">
+                   
+                    <div class="choose"><h2>Click if you want for some other ocassions<br><button class="click"><a href="birthday.html">click</a></button></h2></div>
+                    
+                </div>
+         </div>
+         
+        
+        
+
+
+
+            
+
+
+
+         </div>
+
+      </div>
+
+      <script src="scrift.js"></script>
+</body>
+</html>
