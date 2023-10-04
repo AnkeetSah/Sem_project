@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+   
+    <style>
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  body {
+   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    background-color: #e3e9f7;
+    font-family: "Noto Serif", serif;
+    font-family: "Rubik", sans-serif;
+  }
+ 
+  li {
+    list-style: none;
+  }
+
+  .navbar a {
+    
+    color: #212526;
+    text-decoration: none;
+    font-weight: bolder;
+    -webkit-text-stroke:.1px rgb(24, 5, 5);
+  }
+  .navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    background-color: antiquewhite;
+  }
+  .nav-menu {
+    display: flex;
+    justify-content: item space-between;
+    gap: 60px;
+  }
+
+  .nav-branding {
+    font-size: 2rem;
+   
+  }
+
+  .nav-link {
+    transition: 0.7s ease;
+    font-size: 20px;
+    display: block;
+    font-weight: bolder;
+    padding: 9px;
+    border-radius: 50px;
+  }
+  .nav-link:hover {
+    background-color: rgb(16, 14, 5);
+    /* background-color: #675cff; */
+    color: antiquewhite;
+    -webkit-text-stroke:0px rgb(17, 15, 15);
+  }
+
+  .hamburger {
+    cursor: pointer;
+    display: none;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(17, 8, 8);
+  }
+
+ 
+
+   .child1{
+    grid-area: child1;
+   }
+   .child2{
+    grid-area: child2;
+   }.child3{
+    grid-area: child3;
+   }
+    
+   .item1{
+    grid-area: item1;
+   }
+   .item2{
+    grid-area: item2;
+   }
+   .item3{
+    grid-area: item3;
+   }
+
+
+   @media only screen and (max-width: 550px) {
+
+   
+    .hamburger {
+      display: block;
+    
+    }
+
+    .hamburger.active .bar2 {
+      opacity: 0;
+    }
+
+    .hamburger.active .bar1{
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar3 {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-link {
+      height: 40px;
+      margin-bottom: -30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: item center;
+      border-radius: 10px;
+      font-weight: bolder;
+    }
+
+    .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      gap: 0px;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.19);
+      background: antiquewhite;
+      /* border-radius: 16px; */
+      /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(13px);
+      -webkit-backdrop-filter: blur(13px); */
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      height: 100%;
+      justify-content: item flex-start;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .nav-item {
+      margin: 16px 0;
+     
+     
+    }
+
+    .nav-menu.active {
+      left: -15%;
+    }
+
+    header{
+      margin-top: 40px;
+    }
+
+    
+    
+  }
+  
+  .nav-branding{
+    font-weight: bolder;
+    -webkit-text-stroke:.1px rgb(21, 14, 14);
+   color: rgb(17, 8, 8)
+  }
+
+   .child {
+    /* width: 400px; */
+    margin-bottom: 20px;
+   
+  }
+
+   .child img{
+    width: 100%;
+  }
+
+    
+   
+   
+   
+
+   
+ 
+   
+
+  
+
+   
+     
+
+     @media only screen and (max-width: 770px){
+       
+    
+            .child{
+              background-size: 100% 100%;
+            }
+            .navbar{
+              position: fixed;
+              min-height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+        background-color: antiquewhite;
+        width: 100vw;
+         margin-top: -40px;
+            } 
+         
+     }
+
+
+
+
+
+      body {
+        background-color: wheat;
+      }
+
+      .container {
+        width: 90%;
+        /* background-color: rgb(82, 107, 107); */
+        height: 650px;
+        margin:  auto;
+        display: flex;
+    
+        flex-wrap: wrap;
+      }
+
+      .childs1 {
+        width: 320px;
+
+        background-color: rgb(243, 248, 246);
+        height: 520px;
+        border-radius: 15px;
+        box-shadow: 2px 3px 6px black;
+      }
+
+      .childs2 {
+        background-color: rgb(240, 240, 246);
+        width: 73%;
+        margin-left: -10px;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 2px 3px 6px black;
+        height: 600px;
+      }
+
+      .c1p1 {
+        height: 50%;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: wheat;
+        flex-direction: column;
+        border-radius: 15px 15px 15px 15px;
+      }
+
+      .c1p1 img {
+        height: 160px;
+      }
+
+      .childs2 h1 img {
+        height: 40px;
+        margin-right: 5px;
+      }
+
+      .childs2 h1 {
+        display: flex;
+        font-family: "Young Serif", serif;
+        border-bottom: 2px solid rgb(47, 46, 46);
+      }
+
+      .childs1 h3 img {
+        height: 28px;
+        margin-right: 10px;
+      }
+
+      .childs1 h3 {
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        border-bottom: 1px solid #7b7171;
+        margin-bottom: 0px;
+        line-height: 45px;
+      }
+
+      .childs1 h3:hover {
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+      }
+
+      label {
+        font-size: 30px;
+      }
+
+      input {
+        background: transparent;
+        border: none;
+        outline: none;
+      }
+
+      input[value] {
+        font-size: 25px;
+        border-bottom: 2px solid grey;
+        color: rgb(49, 47, 47);
+        margin-left: 20px;
+      }
+
+      .form {
+        text-align: center;
+
+        margin-bottom: 30px;
+      }
+
+      .update {
+        background-color: #4caf50;
+        /* Green background color */
+        border: none;
+        /* Remove border */
+        color: white;
+        /* Text color */
+        padding: 10px 20px;
+        /* Padding for content */
+        font-size: 16px;
+        /* Font size */
+        border-radius: 5px;
+        /* Rounded corners */
+        cursor: pointer;
+        /* Add a pointer cursor on hover */
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+        /* Add smooth transitions */
+      }
+      .save {
+        background-color: #4caf50;
+        /* Green background color */
+        border: none;
+        /* Remove border */
+        color: white;
+        /* Text color */
+        padding: 10px 20px;
+        /* Padding for content */
+        font-size: 16px;
+        /* Font size */
+        border-radius: 5px;
+        /* Rounded corners */
+        cursor: pointer;
+        /* Add a pointer cursor on hover */
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+        /* Add smooth transitions */
+      }
+
+      /* Button hover effect */
+      .update:hover {
+        background-color: #45a049;
+        /* Darker green on hover */
+        transform: translateY(-1px);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        /* Increase shadow on hover */
+      }
+
+      /* Button active effect */
+      .update:active {
+        background-color: #453e8e;
+        /* Darker green on click */
+
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        /* Reduce shadow on click */
+      }
+
+      .btn {
+        text-align: center;
+      }
+
+      .save {
+        margin-left: 5px;
+      }
+      .form img {
+        width: 30px;
+      }
+
+      header{
+        margin-bottom: 41px;
+      }
+
+
+      .childs1,.childs2{
+        margin-top: -30px;
+      }
+
+      @media only screen and (max-width: 830px){
+         .childs1{
+          width: 100%;
+          margin-bottom: 40px;
+          margin-top: -30px;
+         } 
+                 .childs2{
+          width: 100%;
+          height: 510px;
+          margin-left: 0px;
+         }
+      }
+
+      @media only screen and (max-width:780px) {
+        .childs1{
+          margin-top: 44px;
+        }
+        .childs2{
+          height: 340px;
+        }
+      }
+
+      @media only screen and (max-width:550px){
+        .childs2{
+          height: 445px;
+        }
+        .btn{
+          padding-top: 20px;
+          height: 100px;
+        }
+      }
+
+
+      @media only screen and (max-width:415px){
+        .childs2{
+          height: auto;
+          
+        }
+
+        
+      }
+
+      @media only screen and (max-width:380px){
+        body{
+          height: 164vh;
+         
+        }
+        .childs2{
+          height: auto;
+        }
+       
+        .form img{
+          width: 20px;
+        }
+       input{
+        width: 90%;
+       }
+       .form{
+      
+        padding-top: 20px;
+       }
+      }
+
+      @media only screen and (max-width:300px){
+        .container{
+          width: 99%;
+        }
+        .form{
+          margin-bottom: 0px;
+        }
+        .childs2{
+          margin-top: -50px;
+        }
+
+        .save{
+          margin-top: 5px;
+        }
+      }
+
+
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+      <nav class="navbar">
+        <a href="#" class="nav-branding">Swift Stay</a>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index1.html" class="nav-link">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">ABOUT US</a>
+          </li>
+          <li class="nav-item">
+            <a href="account.html" class="nav-link">ACCOUNT</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">NOTIFICATION</a>
+          </li>
+        </ul>
+
+        <div class="hamburger">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="childs1">
+        <div class="c1p1">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+            alt=""
+          />
+          <h2>Ankeet Kumar Sah</h2>
+        </div>
+        <h3>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2357/2357048.png"
+            alt=""
+          />
+          Reservations
+        </h3>
+        <h3>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/726/726488.png"
+            alt=""
+          />Payement Information
+        </h3>
+        <h3>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/6657/6657932.png"
+            alt=""
+          />Room Service Request
+        </h3>
+        <h3>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/5921/5921586.png"
+            alt=""
+          />Check Out
+        </h3>
+        <h3>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/10936/10936461.png"
+            alt=""
+          />
+          Feedbacks
+        </h3>
+      </div>
+      <div class="childs2">
+        <h1>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4210/4210976.png"
+            alt=""
+          />Update Account
+        </h1>
+        <form action="">
+          <div class="form">
+            <label for="name">Your name</label>
+            <input type="text" name="" id="name" value="Ankeet" readonly /><img
+              src="https://cdn-icons-png.flaticon.com/512/4341/4341104.png"
+              alt=""
+              style="display: none"
+            />
+          </div>
+          <div class="form">
+            <label for="email">Your Email</label>
+            <input
+              type="email"
+              name=""
+              id="email"
+              value="ak@workgmail.com"
+              readonly
+            />
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/4341/4341104.png"
+              alt=""
+              style="display: none"
+            />
+          </div>
+          <div class="form">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name=""
+              id="password"
+              value="12345678"
+              readonly
+            /><img
+              src="https://cdn-icons-png.flaticon.com/512/4341/4341104.png"
+              alt=""
+              style="display: none"
+            />
+          </div>
+          <div class="btn">
+            <button type="button" class="update">Update</button>
+            <button type="button" class="cancel update">Cancel</button>
+            <button type="button" class="save update" style="display: none">
+              save
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- <script src="nav.js"></script> -->
+    <script>
+      const update = document.querySelector(".update");
+      const save = document.querySelector(".save");
+      const input = Array.from(document.querySelectorAll("input"));
+      const btn = document.querySelector(".btn");
+      const form = Array.from(document.querySelectorAll(".form img"));
+
+      console.log(form);
+
+      update.addEventListener("click", () => {
+        save.style.display = "inline";
+
+        input.forEach((element) => {
+          element.removeAttribute("readonly");
+        });
+
+        form.forEach((elem) => {
+          elem.style.display = "inline";
+        });
+      });
+      
+      save.addEventListener("click", () => {
+        save.style.display = "none";
+
+        input.forEach((element) => {
+          element.setAttribute("readonly", "readonly");
+          console.log(element);
+        });
+
+        form.forEach((elem) => {
+          elem.style.display = "none";
+        });
+      });
+
+
+
+      
+      const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+      
+            hamburger.addEventListener("click", () => {
+              hamburger.classList.toggle("active");
+              navMenu.classList.toggle("active");
+            });
+      
+            document.querySelectorAll(".nav-link").forEach((n) =>
+              n.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+              })
+            );
+  </script>
+  
+
+  </body>
+</html> 
+
+
+      
+      
+      
+      
+        
+         

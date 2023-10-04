@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="style.css">   -->
-    <style>
-        * {
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -16,8 +7,7 @@
    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 100vh;
     background-color: #e3e9f7;
-    font-family: "Noto Serif", serif;
-    font-family: "Rubik", sans-serif;
+    
   }
  
   li {
@@ -79,7 +69,17 @@
     background-color: rgb(17, 8, 8);
   }
 
- 
+  .container{
+   padding: 10px;
+  width: 100%;
+  display: grid;
+   height: 100vh;
+  grid-template-columns: .4fr .4fr .4fr;
+  grid-template-rows:.5fr .2fr;
+  grid-gap: 20px;
+  grid-template-areas: "child1 child2 child3"
+                        "item1 item2 item3"
+  }
 
    .child1{
     grid-area: child1;
@@ -161,9 +161,6 @@
       left: -15%;
     }
 
-    header{
-      margin-top: 40px;
-    }
 
     
     
@@ -185,22 +182,55 @@
     width: 100%;
   }
 
+    .item{
+    /* background-color: #675cff; */
+    background-color: antiquewhite;
+    margin-top: -40px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+        }
+
+   .item h1 {
+  
+      margin-left: 30px;
+      color: rgb(40, 1, 1);
+   }
+    .item h2{
+      margin-left: 30px;
+      color: grey;
+   }
     
+    
+
    
    
    
 
-   
+   .arrow{
+     width: 20px;
+     margin-left: 4px;
+   }
  
    
 
-  
-
-   
-     
-
      @media only screen and (max-width: 770px){
-       
+        .container{
+            padding: 5px;
+          height: 200vh;
+          margin-top: 40px;
+           grid-template-columns: 1fr;
+           grid-template-rows: 2fr 1fr 2fr 0.4fr 2fr 0.4fr;
+           grid-template-areas:
+                        "child1"
+                        "item1"
+                        "child2"
+                        "item2"
+                        "child3"
+                        "item3" ;
+        }
     
             .child{
               background-size: 100% 100%;
@@ -220,41 +250,5 @@
      }
 
     
+
     
-     
-    
-    </style>
-</head>
-<body>
-        <header>
-            <nav class="navbar">
-              <a href="#" class="nav-branding">Swift Stay</a>
-      
-              <ul class="nav-menu">
-                <li class="nav-item">
-                  <a href="#" class="nav-link">HOME</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">ABOUT US</a>
-                </li>
-                <li class="nav-item">
-                  <a href="account.html" class="nav-link">ACCOUNT</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">NOTIFICATION</a>
-                </li>
-              </ul>
-      
-              <div class="hamburger">
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-                <div class="bar bar3"></div>
-              </div>
-            </nav>
-          </header>
-
-
-
-         <script src="nav.js"></script>
-</body>
-</html>
